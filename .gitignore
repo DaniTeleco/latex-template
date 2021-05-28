@@ -23,4 +23,6 @@
 *.out
 *.pdf
 *.fls
+main.*
+!*.tex
 *.synctex.gz
