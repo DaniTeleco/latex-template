@@ -24,5 +24,6 @@
 *.pdf
 *.fls
 main.*
+!main.tex
 !*.tex
 *.synctex.gz
