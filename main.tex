@@ -1,0 +1,191 @@
+% -----------------------------------------------------------
+% Author: DANIEL PEREZ RODRIGUEZ
+% 
+% Last Update - May 2021
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+% Document Type
+%-----------------------------------------------------------
+%\documentclass[a4paper,11pt]{report}	% Chapters NOT Starting on ODD pages
+\documentclass[a4paper,11pt]{book} 		% Chapters Starting on ODD pages
+
+%-----------------------------------------------------------
+% Used Packages
+%-----------------------------------------------------------
+\usepackage{url}
+\usepackage[pdftex]{graphicx}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{amssymb,amstext,amsmath}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{ifthen}
+\usepackage{calligra}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{footnote}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{makeidx}
+\usepackage{tabularx}
+% Custom Language
+%\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}	% Direct spanish accents on LATEX
+
+%-----------------------------------------------------------
+% WATERMARK - Customize Values
+%-----------------------------------------------------------
+\usepackage{draftwatermark}                 % Watermark in all pages
+%\usepackage[firstpage]{draftwatermark}     % Watermark only in first page
+\SetWatermarkAngle{45}
+\SetWatermarkLightness{0.9}
+\SetWatermarkFontSize{8cm}
+\SetWatermarkScale{1}
+\SetWatermarkText{DRAFT}
+%-----------------------------------------------------------
+% Path where to put images
+%-----------------------------------------------------------
+\graphicspath{{./}{./figures/}}
+
+%-----------------------------------------------------------
+% Footer and header
+%-----------------------------------------------------------
+\pagestyle{fancy} %
+\lhead[]{} %
+\rhead[\scriptsize{\rightmark}]{\scriptsize{\rightmark}}
+\lfoot[\scriptsize{\leftmark}] {\scriptsize{\leftmark}} %
+\cfoot[]{} %
+\rfoot[\scriptsize{\thepage}] {\scriptsize{\thepage}} %
+\renewcommand{\headrulewidth}{0.75pt} %
+\renewcommand{\footrulewidth}{0.75pt} %
+\setlength{\headheight}{24.0pt} %
+\setlength{\headsep}{30.0pt}
+\definecolor{grey}{RGB}{190,190,190}
+\renewcommand\chaptername{Part}
+
+%-----------------------------------------------------------
+% COMMANDS
+%-----------------------------------------------------------
+\newcommand{\zup}[1]{\mathbf{z}^{#1}}
+\newcommand{\zat}[1]{\mathbf{z}_{#1}}
+\newcommand{\uup}[1]{\mathbf{u}^{#1}}
+\newcommand{\uat}[1]{\mathbf{u}_{#1}}
+\newcommand{\xup}[1]{\mathbf{X}^{#1}} %Random variable
+\newcommand{\xat}[1]{\mathbf{X}_{#1}}
+\newcommand{\pat}[1]{\mathbf{P}_{#1}}
+\newcommand{\prat}[1]{\mathbf{p}_{#1}} %Realization of x
+\newcommand{\xrat}[1]{\mathbf{x}_{#1}} %Realization of x
+\newcommand{\xrup}[1]{\mathbf{x}^{#1}}
+\newcommand{\qat}[1]{\mathbf{Q}_{#1}}
+\newcommand{\qup}[1]{\mathbf{Q}_{#1}}
+\newcommand{\fat}[2]{f_{#1,#2}}
+%\floatname{algorithm}{Algoritmo}   % For Spanish Language Only
+\makeindex
+
+%-----------------------------------------------------------
+% Document
+%-----------------------------------------------------------
+\begin{document}
+
+%-----------------------------------------------------------
+% Title
+%-----------------------------------------------------------
+% Image by David Zydd - https://pixabay.com/users/davidzydd-985081/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2790337
+\title{\textbf{YOUR TITLE\\} \vspace{1cm} Subtitle\\Subsubtitle\\
+\vspace{1cm}\includegraphics[width=0.25\textwidth]{cover.png}}
+\author{I am the BATMAN}
+\date{May, 2021}
+\maketitle
+
+%%-----------------------------------------------------------
+%% Blank Page
+%%-----------------------------------------------------------
+\input{blank-page}
+
+%-----------------------------------------------------------
+% Dedicated TO
+%-----------------------------------------------------------
+\include{dedication}
+
+%%-----------------------------------------------------------
+%% Blank Page
+%%-----------------------------------------------------------
+\input{blank-page}
+
+%-----------------------------------------------------------
+% Prologue
+%-----------------------------------------------------------
+\include{prologue}
+
+%%-----------------------------------------------------------
+%% Blank Page
+%%-----------------------------------------------------------
+\input{blank-page}
+
+%-----------------------------------------------------------
+% Lists
+%-----------------------------------------------------------
+\renewcommand{\listtablename}{Custom Table Index Name}  % Customizing Table Index Name
+\renewcommand{\tablename}{Custom Table Name}            % Customizing Table Names
+\tableofcontents
+\listoffigures
+\listoftables
+
+%%-----------------------------------------------------------
+%% Blank Page
+%%-----------------------------------------------------------
+\input{blank-page}
+
+%-----------------------------------------------------------
+% Nomenclature
+%-----------------------------------------------------------
+\include{nomenclature}
+
+%-----------------------------------------------------------
+% Blank Page
+%-----------------------------------------------------------
+\input{blank-page}
+
+%-----------------------------------------------------------
+% Chapters
+%-----------------------------------------------------------
+\include{chapter_1}
+\include{chapter_2}
+%\include{chapter_3}
+%\include{chapter_4}
+%\include{chapter_5}
+%\include{chapter_6}
+% ... and so on
+
+%-----------------------------------------------------------
+% Appendix
+%-----------------------------------------------------------
+\appendix
+\include{appendix_1}
+\include{appendix_2}
+%\include{appendix_3}
+%\include{appendix_4}
+%\include{appendix_5}
+%\include{appendix_6}
+% ... and so on
+\include{acronyms}
+
+%-----------------------------------------------------------
+% Alphabetic Index - Yo sure ?
+%-----------------------------------------------------------
+
+%\printindex % Youn only have to add command: \index{key} to the desired key reference
+
+%-----------------------------------------------------------
+% Bibliography
+%-----------------------------------------------------------
+\bibliographystyle{IEEEtranS}
+\bibliography{bibliography}
+\end{document}
