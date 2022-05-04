@@ -11,7 +11,7 @@ You should start inspecting **main.tex** file.  The final output should be a **m
 
 ## Usage
 
-If you don't have a clue about what LATEX is, I will simply recommend you two links to check:
+If you don't have a clue about what LATEX is, I will simply recommend you these links to check:
 
 * [LATEX Project](https://www.latex-project.org/)
 * [LATEX Wikipedia](https://en.wikipedia.org/wiki/LaTeX)
